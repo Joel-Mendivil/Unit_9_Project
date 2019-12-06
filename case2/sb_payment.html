@@ -128,29 +128,28 @@
 
             <label for="phoneBox">Phone</label>
             <input name="phone" id="phoneBox" type="tel" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required="required"/>
-
         </fieldset>
-        <fieldset id="creditCard">
+        <fieldset id="creditCard" required="required">
            <legend>Credit Card (required)</legend>
            <fieldset>
                <label class="cardLabel">
-                  <input name="cardLabel" type="radio"><img src="sb_amex.png">
+                  <input name="cardLabel" type="radio" value="amex"><img src="sb_amex.png">
                </label>
                <label class="cardLabel">
-                  <input name="cardLabel" type="radio"><img src="sb_discover.png">
+                  <input name="cardLabel" type="radio" value="discover"><img src="sb_discover.png">
                </label>
                <label class="cardLabel">
-                  <input name="cardLabel" type="radio"><img src="sb_master.png">
+                  <input name="cardLabel" type="radio" value="master"><img src="sb_master.png">
                </label>
                <label class="cardLabel">
-                  <input name="cardLabel" type="radio"><img src="sb_visa.png">
+                  <input name="cardLabel" type="radio" value="visa"><img src="sb_visa.png">
                </label>
            </fieldset>
 
            <label for="cardBox">Credit Card Number</label>
            <input id="cardBox" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required="required"/>
 
-           <label for="yearList">Expiration Date</label>
+           <label for="monthList">Expiration Date</label>
             <select id="monthList" required="required">
                <option value="--Month--">--Month--</option>
                <option value="January (01)">January (01)</option>
@@ -176,7 +175,7 @@
             </select>
 
            <label for="cscBox">CSC</label>
-           <input name="csc" id="cscBox" pattern="^/d{3}$" max="3" placeholder="nnn" />
+           <input name="csc" id="cscBox" pattern="^\d{3}$" max="3" placeholder="nnn" />
 
         </fieldset>
         <button type="submit">
